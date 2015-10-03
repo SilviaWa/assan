@@ -15,9 +15,10 @@ body {
   line-height: 24px;
   background-color: #fff; }
 
+/*basic partial scss includes resetting and dividers*/
 /*
 /*-----------------------------------------------------------------------------------*/
-/*	RESET
+/*  RESET
 /*-----------------------------------------------------------------------------------*/
 *,
 *:before,
@@ -209,7 +210,7 @@ p.sub-text {
   overflow: hidden; }
 
 /*-----------------------------------------------------------------------------------*/
-/*	DIVIDERS
+/*  DIVIDERS
 /*-----------------------------------------------------------------------------------*/
 .divide0 {
   width: 100%;
@@ -430,7 +431,8 @@ p.sub-text {
 .navbar .dropdown-menu li a:hover {
   background-color: #f5f5f5; }
 
-/*change */
+/***********END bootstrap navigation default overrides --*/
+/*fasids might not need this */
 /*********************
 
 TOP BARS
@@ -886,6 +888,7 @@ input[type="color"]:focus,
   background-size: cover;
   background-attachment: fixed; }
 
+/*change */
 /*carousel slider*/
 #myCarousel {
   background: url(../img/showcase-1.jpg) no-repeat; }
@@ -1078,63 +1081,6 @@ input[type="color"]:focus,
 .intro-text a {
   margin: 7px; }
 
-/*******************home parallax-bg----***********************/
-#home-parallax {
-  background: url("../img/showcase-4.jpg") no-repeat;
-  padding: 190px 0; }
-
-.typed-cursor {
-  opacity: 1;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
-  animation: blink 0.7s infinite;
-  color: #4f82e9; }
-
-@keyframes blink {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@-moz-keyframes blink {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-.parallax-buttons {
-  display: block;
-  text-align: center;
-  margin-top: 20px; }
-
-.parallax-buttons a {
-  display: inline-block;
-  margin: 5px; }
-
-h1.typed-text {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  font-weight: 700; }
-
-.typed-text .element {
-  color: #4f82e9; }
-
-#home-parallax p {
-  color: #fff; }
-
-@media (max-width: 568px) {
-  h1.typed-text {
-    font-size: 25px; } }
 /*services*/
 .services-wrap {
   padding-top: 60px;
@@ -1156,31 +1102,29 @@ h1.typed-text {
   position: relative;
   text-align: center;
   top: 5px; }
-
-.services-box-icon i {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  background-color: #4f82e9;
-  color: #fff;
-  font-size: 17px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%; }
+  .services-box-icon i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #4f82e9;
+    color: #fff;
+    font-size: 17px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; }
 
 .services-box-info {
   padding-left: 65px; }
+  .services-box-info h4 {
+    font-weight: 700;
+    font-size: 15px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 5px; }
 
-.services-box-info h4 {
-  font-weight: 700;
-  font-size: 15px;
-  color: #000;
-  text-transform: uppercase;
-  margin-bottom: 5px; }
-
-/*services 2*/
+/*services 2, ".service-box" is only used in home-2.html*/
 .service-box i {
   width: 85px;
   height: 85px;
@@ -1198,13 +1142,11 @@ h1.typed-text {
   -o-transition: 0.7s ease-in-out;
   -webkit-transition: 0.7s ease-in-out;
   transition: 0.7s ease-in-out; }
-
 .service-box h3 {
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 15px;
   font-weight: 500; }
-
 .service-box:hover i {
   -moz-transform: rotateY(360deg);
   -o-transform: rotateY(360deg);
@@ -1214,7 +1156,7 @@ h1.typed-text {
   color: #fff;
   background-color: #4f82e9; }
 
-/***services3***/
+/***services3,  ***/
 #services-bg-wrap {
   padding: 90px 0;
   background-color: #f7f9fa; }
@@ -1262,11 +1204,29 @@ h1.typed-text {
 .special-feature .section-title hr {
   border-color: #151515; }
 
+.special-feature .s-feature-box {
+  overflow: hidden;
+  position: relative;
+  height: 280px;
+  border: 1px solid #f2f2f2;
+  margin-bottom: 20px;
+  cursor: pointer; }
+  .special-feature .s-feature-box:hover .mask-top {
+    top: -200px;
+    -moz-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; }
+  .special-feature .s-feature-box:hover .mask-bottom {
+    bottom: 0;
+    -moz-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; }
 .special-feature i {
   font-size: 65px;
   line-height: 75px;
   color: #4f82e9; }
-
 .special-feature h4 {
   font-size: 16px;
   margin-top: 25px;
@@ -1274,7 +1234,6 @@ h1.typed-text {
   text-transform: uppercase;
   font-weight: 700;
   color: #777; }
-
 .special-feature .mask-top {
   width: 100%;
   background-color: #ffffff;
@@ -1285,33 +1244,16 @@ h1.typed-text {
   -o-transition: all 0.3s ease-out 0s;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s; }
-
-.special-feature .mask-top h4:before {
-  top: -18px;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 0;
-  right: 0;
-  margin: -2px auto;
-  position: absolute;
-  width: 40px; }
-
-.special-feature .s-feature-box:hover .mask-top {
-  top: -200px;
-  -moz-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s; }
-
-.special-feature .s-feature-box {
-  overflow: hidden;
-  position: relative;
-  height: 280px;
-  border: 1px solid #f2f2f2;
-  margin-bottom: 20px;
-  cursor: pointer; }
-
+  .special-feature .mask-top h4:before {
+    top: -18px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    right: 0;
+    margin: -2px auto;
+    position: absolute;
+    width: 40px; }
 .special-feature .mask-bottom {
   color: #333333;
   padding: 20px 15px 20px 15px;
@@ -1323,58 +1265,17 @@ h1.typed-text {
   -o-transition: all 0.3s ease-out 0s;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s; }
+  .special-feature .mask-bottom p {
+    padding: 0px 5px;
+    font-size: 13px; }
+  .special-feature .mask-bottom h4 {
+    margin: 15px 0px 17px; }
+  .special-feature .mask-bottom i {
+    font-size: 38px;
+    line-height: 50px; }
 
-.special-feature .mask-bottom p {
-  padding: 0px 5px;
-  font-size: 13px; }
-
-.special-feature .mask-bottom h4 {
-  margin: 15px 0px 17px; }
-
-.special-feature .s-feature-box:hover .mask-bottom {
-  bottom: 0;
-  -moz-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s; }
-
-.special-feature .mask-bottom i {
-  font-size: 38px;
-  line-height: 50px; }
-
-/****services new*****/
-.service-box-4 .service-ico {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 30px;
-  line-height: 30px;
-  margin-top: 3px;
-  float: left;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
-
-.service-ico i {
-  color: #4f82e9; }
-
-.service-box-4 .service-text {
-  margin-left: 50px; }
-
-.service-text a {
-  color: #4f82e9; }
-
-.service-text a i {
-  margin-left: 5px;
-  vertical-align: middle; }
-
-.service-text h4 {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 16px; }
-
+/****services new, which is moved to _home-parallax.scss*****/
+/**END services new**/
 /***colored boxed**************/
 .colored-boxed {
   text-align: center; }
@@ -3293,7 +3194,7 @@ span.results-number {
   display: block; }
 
 /*-----------------------------------------------------------------------------------*/
-/*	Process
+/*  Process
 /*-----------------------------------------------------------------------------------*/
 .process h2 {
   text-transform: uppercase;

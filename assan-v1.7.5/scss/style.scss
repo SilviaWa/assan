@@ -19,183 +19,13 @@ body {
 }
 
 
-/*basic partial scss includes "resetting" and "dividers" and nav overrides*/
+/*basic partial scss includes "resetting" and "dividers" and nav overrides, form elements, buttons, image hover effect*/
 @import "basic";
 
 /*fasids might not need this topbars */
 @import 'topbars';
 
-
-/*************************************************************/
-/************************** Buttons **************************/
-/*************************************************************/
-
-.btn {
-  font-weight:600;
-  letter-spacing: 0px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-
-}
-.btn-lg {
-  padding: 14px 28px 13px 28px;
-  font-size: 13px;
-  font-weight: 700;
-}
-.btn:focus,.btn:hover{
-  outline: 0;
-  color:#fff;
-}
-.btn-xs{
-  font-size: 12px;
-}
-
-.btn-theme-bg{
-  border-color: $skincolor;
-  color: #fff;
-  background-color: $skincolor;
-  @include box-shadow (0px 1px 1px rgba(0,0,0,0.2));
-}
-.btn i{
-  margin-right: 10px;
-}
-.btn-theme-bg:hover{
-  background-color: #333;
-  border-color: #333 ;
-}
-.btn-theme-dark{
-  background-color: #333;
-  color:#fff;
-  @include box-shadow (0px 1px 1px rgba(0,0,0,0.2));
-}
-.btn-theme-dark:hover{
-  color:#fff;
-  background-color: $skincolor;
-}
-
-/*********border-buttons**********/
-.border-black{
-  border: 1px solid #333;
-  color:#000;
-  background-color: transparent;
-  @include box-shadow (0px 1px 1px rgba(0,0,0,0.2));
-}
-.border-black:hover{
-  background-color: #000;
-  border-color: #000;
-  color:#fff;
-}
-
-.border-white{
-  border: 1px solid #fff;
-  color:#fff;
-  @include box-shadow (0px 1px 1px rgba(0,0,0,0.2));
-}
-.border-white:hover{
-  background-color: #fff;
-  border-color: #fff;
-  color:#000;
-}
-.border-theme{
-  border: 1px solid $skincolor;
-  color:$skincolor;
-  @include box-shadow (1px 1px 3px rgba(0,0,0,0.2));
-}
-.border-theme:hover{
-  background-color: $skincolor;
-  border-color: $skincolor;
-  color:#fff;
-}
-/************************image hover effect*******************/
-
-.item-img-wrap{
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-
-}
-.item-img-wrap img{
-  @include transition(all 200ms linear);
-  width:100%;
-}
-.item-img-overlay{
-  position: absolute;
-  width:100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-.item-img-overlay span{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url(../img/plus.png) no-repeat center center rgba(79, 130, 233, 0.7);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  opacity: 0;
-  @include transition (opacity 250ms linear);
-}
-
-.item-img-wrap:hover .item-img-overlay span{
-  opacity: 1;
-}
-.item-img-wrap:hover img{ 
-  @include transform (scale(1.1));
-}
-
-
-
-
-/*forms, decorating original bootstrap*/
-select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.form-control{
-  border: 1px solid #ddd;
-  @include border-radius (0);
-  font-size: 12px;
-  color: #7a7a7a;
-  @include box-shadow (none);
-  background: #FFF;
-  @include transition (all 200ms ease-in);
-}
-textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.form-control:focus{
-  border-color: #bbb;
-  background: #FFF;
-  @include box-shadow (none);
-}
-
+/************************image hover effect, was moved to _basic.scss*******************/
 
 /*************parallax*************/
 .parallax {
@@ -228,6 +58,7 @@ input[type="color"]:focus,
   -moz-animation-delay: 1200ms;
   animation-delay: 1200ms;
 }
+// not used
 .delay-4{
   -webkit-animation-delay: 1600ms;
   -moz-animation-delay: 1600ms;
@@ -250,17 +81,13 @@ input[type="color"]:focus,
   margin: 7px;
 }
 
-
-
 //@import "home-parallax";
-
 
 /*  services */
 @import "services-snippets";  
 
 /****services new, which is moved to _home-parallax.scss*****/
 /**END services new**/
-
 
 /***colored boxed**************/
 @import "color-boxed";  //see at index.html, home-side-menu.html, it has content such as "FREE SUPPORT & UPDATES" and those colored boxes
@@ -369,7 +196,7 @@ h3.heading-progress {
   padding-left: 30px;
 }
 
-/*latest news in home option*/
+/*latest news in home option, found in home-2.html*/
 .latest-new{
   border: 1px solid #ddd;
 }
@@ -396,7 +223,7 @@ h3.heading-progress {
   }
 }
 
-// .l-news-desc found in home-2.html
+// .l-news-desc only found in home-2.html
 .l-news-desc {
   padding: 10px 20px;
 
@@ -418,67 +245,68 @@ h3.heading-progress {
   }
 }
 
-
-
 /**blog inner pages**/
+
+// one summary of a blog,
 .blog-post{
   border-bottom: 1px dashed #e5e5e5;
   padding-bottom: 30px;
   margin-bottom: 60px;
+  h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
 }
-.post-detail{
+.post-detail {
   margin-top: 25px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   border-top: 1px solid #ebeaea;
   border-bottom: 1px solid #ebeaea;
-  margin-left: 0px;
+  margin-left: 0;
+  li {
+    font-size: 11px;
+    color: #777;
+    font-weight: 600;
+    vertical-align: middle;
+    text-transform: uppercase;
+    img {
+      width: 26px;
+      height: 26px;
+      @include border-radius(13px) ;
+      float: left;
+      margin-right: 10px;
+    }
+    i {
+      margin-right: 5px;
+    }
+    + li {
+      padding-left: 15px;
+    }
+  }
 }
-.post-detail li img{
-  width:26px;
-  height: 26px;
-  @include border-radius (13px);
-  float: left;
-  margin-right: 10px;
-}
-.post-detail li + li{
-  padding-left: 15px;
-}
-.post-detail li{
-  font-size: 11px;
-  color: #777;
-  font-weight: 600;
-  vertical-align: middle;
-  text-transform: uppercase;
-}
-.post-detail li i{
-  margin-right: 5px;
-}
-.blog-post h2{
-  font-size: 20px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  font-weight: 500;
-  text-transform: capitalize;
 
-}
+
 .blog-left-img .post-detail{
   margin-top: 0px;
 }
+// following till .comment-form, all within blog-single.html
 .about-author{
   background-color: #f5f5f5;
   padding: 30px;
   margin-bottom: 50px;
+  img{
+    width:120px;
+    height: 120px;
+    float: left;
+    margin-right: 10px;
+    @include border-radius (3px);
+  }
+  p {overflow: hidden;}
 }
-.about-author img{
-  width:120px;
-  height: 120px;
-  float: left;
-  margin-right: 10px;
-  @include border-radius (3px);
-}
-.about-author p{
-  overflow: hidden;
-}
+
 .comment-list{
   padding-bottom: 5px;
   margin-bottom: 30px;
@@ -488,9 +316,9 @@ h3.heading-progress {
   height: 60px;
   margin-right: 20px;
   float: left;
-}
-.comment-post p{
-  overflow: hidden;
+  p{
+    overflow: hidden;
+  }
 }
 .comment-form .form-contact .form-control{
   background-color: #f5f5f5;
@@ -613,15 +441,15 @@ ol.breadcrumb{
   padding: 0;
   background-color: transparent;
   color:#333;
-}
-ol.breadcrumb li{
-  font-weight: 400;
-  font-size: 13px;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-}
-ol.breadcrumb li a{
-  color:#333;
+  li{
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    a{
+      color:#333;
+    }
+  }
 }
 
 /***list of highlight,  only found in about.html, ctrl-f "OUR HIGHLIGHTS"**/
@@ -648,7 +476,7 @@ ol.breadcrumb li a{
 /***************about me*********************/
 @import "me-page";
 
-/**dropcaps**/
+/**dropcaps found in blog-single.html, typography.html**/
 p.dropcap:first-letter{
   display: block;
   float: left;
@@ -708,87 +536,8 @@ label span{
 }
 
 
-/************************sidebar, found many using in blogs, like blog-2col.html***********************/
-.sidebar-box h4{
-  font-size: 14px;
-  font-weight: 700;
-  color: #444;
-  text-transform: uppercase;
-}
-.search-widget{
-  position: relative;
-}
-.search-widget i{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color:#777;
-}
-.cat-list li{
-  padding: 5px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-.cat-list li a{
-  color:#888;
-  margin-right: 10px;
-}
-.cat-list li i{
-  color:#888;
-  margin-right: 10px;
-  @include transition (all 0.3s ease-in-out);
-}
-.cat-list li:hover i{
-  margin-left: 5px;
-}
-.cat-list li a:hover{
-  color:$skincolor;
-}
-.popular-post li{
-  padding-bottom: 20px;
-}
-.popular-img{
-  float: left;
-  margin-right: 10px;
-
-}
-.popular-img a img{
-  width:60px;
-  height: 60px;
-}
-.popular-desc{
-  display: table;
-}
-.popular-desc h5{
-  font-size: 17px;
-  margin-bottom: 6px;
-}
-.popular-desc h5 a{
-  color: #000;
-  font-weight: 600;
-  font-size: 13px;
-}
-.popular-desc h5 a:hover{
-  color:$skincolor;
-}
-.popular-desc h6{
-  color: #777;
-  font-style: normal;
-  font-size: 12px;
-  font-weight: 600;
-}
-.tag-list a{
-  display: inline-block;
-  margin-right: 0px;
-  margin-bottom: 3px;
-  padding: 3px 6px;
-  color: #777;
-  font-size: 12px !important;
-  background-color: #e5e5e5;
-}
-.tag-list a:hover{
-  background-color: #666;
-  color:#fff;
-}
+/*****sidebar, found many using in blogs, like you see in right side of blog-2col.html****/
+@import "side-bar-snippets";
 
 /***********************sign in or sign up css****************/
 .login-form{
@@ -1048,9 +797,7 @@ VERSION V1.3 css start here
 *************************************************/
 
 /******************
-
 MULTI LEVEL DROPDOWN CSS
-
 *********************/
 
 .dropdown-submenu {
@@ -1220,8 +967,6 @@ ASSAN SHOP CSS STARTS FROM BELOW
   font-weight: 700;
 }
 
-
-
 /*******************portfolio with new hover style********************/
 // .featured-work only found in home-carousel.html
 .featured-work{
@@ -1331,8 +1076,6 @@ ASSAN SHOP CSS STARTS FROM BELOW
 }
 
 
-
-
 /***theme features box***/
 .assan-box{
   margin-bottom: 30px;
@@ -1358,31 +1101,6 @@ ASSAN SHOP CSS STARTS FROM BELOW
 
 /***************css for "home-events.html"  ****************/
 @import "home-events-page";
-
-/****massonary****/
-.mas-boxes-inner{
-  padding: 0px;
-  margin-bottom: 30px;
-  border: 1px solid #eee;
-  border-bottom: 3px solid #f5f5f5;
-  padding: 5px;
-}
-.mas-blog-inner{
-  padding: 20px;
-  background-color: #fff;
-}
-.mas-blog-inner h3{
-  text-transform: capitalize;
-}
-.mas-blog-inner .post-detail{
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-.mas-blog-inner h3{
-  margin-bottom: 15px;
-  font-weight: 400;
-}
-
 
 /*************NEW PORTFOLIO IN V1.4****************/
 .filter{
@@ -1452,58 +1170,7 @@ ASSAN SHOP CSS STARTS FROM BELOW
     width:100%;
   } 
 }
-/***new icon overlay***/
-.img-icon{
-  position: relative;
-  overflow: hidden;
-}
-.img-icon img{
-  width:100%;
-  @include transition (all 0.4s ease-in-out);
-}
-.img-icon-overlay{
-  @include transition (all 0.4s ease-in-out);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width:100%;
-  height: 100%;
-  opacity: 0;
-  background-color: rgba(158, 202, 69, 0.6);
-}
-.img-icon-overlay p{
-  position: absolute;
-  width:100%;
-  margin-top: -20px;
-  top: 50%;
-  text-align: center;
-}
-.img-icon-overlay p a{
-  display: inline-block;
-  background-color: rgba(255,255,255,0.99);
-  width:40px;
-  height: 40px;
-  line-height: 40px;
-  margin: 5px;
-  text-align: center;
-  color:#333;
-  @include border-radius (50%);
-  font-size: 20px;
-  @include transition (all 0.4s ease-in-out);
-}
-.img-icon-overlay p a img{
-  width: 20px;
-  height: auto;
-}
-.img-icon-overlay p a:hover{
-  color:$skincolor;
-}
-.img-icon:hover .img-icon-overlay{
-  opacity: 1;
-}
-.img-icon:hover img{
-  @include transform (scale(1.05));
-}
+/***new icon overlay, new image hover effect, which is moved to _basic.scss***/
 
 /***offcanvas css: Bowei: one dropdown button located at left top corner of canvas*****/
 /*I should remove this in FASIDS project*/

@@ -512,3 +512,233 @@ p.sub-text{
   margin-bottom: 0;
 }
 /* end bootstrap tabs overrides*/
+
+
+
+
+
+/*forms, decorating original bootstrap*/
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.form-control{
+  border: 1px solid #ddd;
+  @include border-radius (0);
+  font-size: 12px;
+  color: #7a7a7a;
+  @include box-shadow (none);
+  background: #FFF;
+  @include transition (all 200ms ease-in);
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.form-control:focus{
+  border-color: #bbb;
+  background: #FFF;
+  @include box-shadow (none);
+}
+
+
+/*************************************************************/
+/************************** Buttons **************************/
+/*************************************************************/
+
+.btn {
+  font-weight:600;
+  letter-spacing: 0px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+
+}
+.btn-lg {
+  padding: 14px 28px 13px 28px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.btn:focus,.btn:hover{
+  outline: 0;
+  color:#fff;
+}
+.btn-xs{
+  font-size: 12px;
+}
+
+.btn-theme-bg{
+  border-color: $skincolor;
+  color: #fff;
+  background-color: $skincolor;
+  @include box-shadow (0px 1px 1px rgba(0,0,0,0.2));
+}
+.btn i{
+  margin-right: 10px;
+}
+.btn-theme-bg:hover{
+  background-color: #333;
+  border-color: #333 ;
+}
+.btn-theme-dark{
+  background-color: #333;
+  color:#fff;
+  @include box-shadow (0px 1px 1px rgba(0,0,0,0.2));
+}
+.btn-theme-dark:hover{
+  color:#fff;
+  background-color: $skincolor;
+}
+
+/*********border-buttons**********/
+.border-black{
+  border: 1px solid #333;
+  color:#000;
+  background-color: transparent;
+  @include box-shadow (0px 1px 1px rgba(0,0,0,0.2));
+}
+.border-black:hover{
+  background-color: #000;
+  border-color: #000;
+  color:#fff;
+}
+
+.border-white{
+  border: 1px solid #fff;
+  color:#fff;
+  @include box-shadow (0px 1px 1px rgba(0,0,0,0.2));
+}
+.border-white:hover{
+  background-color: #fff;
+  border-color: #fff;
+  color:#000;
+}
+.border-theme{
+  border: 1px solid $skincolor;
+  color:$skincolor;
+  @include box-shadow (1px 1px 3px rgba(0,0,0,0.2));
+}
+.border-theme:hover{
+  background-color: $skincolor;
+  border-color: $skincolor;
+  color:#fff;
+}
+
+
+/************************image hover effect*******************/
+.item-img-wrap{
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  img{
+    @include transition(all 200ms linear);
+    width:100%;
+  }
+  .item-img-overlay{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    span{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url(../img/plus.png) no-repeat center center rgba(79, 130, 233, 0.7);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: alpha(opacity=0);
+      opacity: 0;
+      @include transition (opacity 250ms linear);
+    }
+  }
+  &:hover{
+    .item-img-overlay span{
+      opacity: 1;
+    }
+    img{
+      @include transform (scale(1.1));
+    }
+  }
+}
+
+/***new icon overlay, new image hover effect, which is moved to _basic.scss***/
+.img-icon{
+  position: relative;
+  overflow: hidden;
+  img{
+    width:100%;
+    @include transition (all 0.4s ease-in-out);
+  }
+  .img-icon-overlay{
+    @include transition (all 0.4s ease-in-out);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(158, 202, 69, 0.6);
+    p{
+      position: absolute;
+      width:100%;
+      margin-top: -20px;
+      top: 50%;
+      text-align: center;
+      a{
+        display: inline-block;
+        background-color: rgba(255,255,255,0.99);
+        width:40px;
+        height: 40px;
+        line-height: 40px;
+        margin: 5px;
+        text-align: center;
+        color:#333;
+        @include border-radius (50%);
+        font-size: 20px;
+        @include transition (all 0.4s ease-in-out);
+        img{
+          width: 20px;
+          height: auto;
+        }
+        &:hover{
+          color:$skincolor;
+        } 
+      }
+    }
+  } 
+
+  &:hover{
+    img{
+        @include transform (scale(1.1));
+    }
+    .img-icon-overlay{
+      opacity: 1;
+    }
+  } 
+}
+

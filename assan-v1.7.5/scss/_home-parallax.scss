@@ -91,3 +91,44 @@ h1.typed-text{
   font-size: 16px;
 }
 
+/*******************Process inline*****/
+// .process-inline only found in home-parallax.html
+.process-inline{
+  margin-top: 50px;
+  padding-top: 80px;
+  background-color: #eee;
+}
+
+// .Process-col only found at "home-parallax.html"
+.Process-col{
+  padding: 80px 30px;
+  text-align: center;
+}
+.Process-col.one{
+  background-color: rgba(0, 0, 0, .3);
+}
+.Process-col.two{
+  background-color: rgba(0, 0, 0, .5);
+}
+.Process-col.three{
+  background-color: rgba(0, 0, 0, .7);
+}
+.Process-col.four{
+  background-color: rgba(0, 0, 0, 1);
+}
+.Process-col i{
+  font-size: 40px;
+  width:80px;
+  height:80px;
+  line-height: 80px;
+  text-align: center;
+  @include border-radius (50%);
+  border: 1px solid #fff;
+  color:#fff;
+}
+.Process-col h4{
+  font-size: 18px;
+  text-transform: uppercase;
+  color:#fff;
+  margin: 25px 0;
+}

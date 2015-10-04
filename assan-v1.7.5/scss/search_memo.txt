@@ -1,12 +1,11 @@
-
-[\s"]service-box-4[\s"]
+[\s"]quote-text[\s"]
 
 
 [\s"]special-feature[\s"]
 
-[\s"]service-box[\s"]
+[\s"]testimonials[\s"]
 
-[\s"]service-box[\s"]
+[\s"]header-center[\s"]
 
 
 [\s"]service-box[\s"]

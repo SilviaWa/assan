@@ -132,3 +132,19 @@ h1.typed-text{
   color:#fff;
   margin: 25px 0;
 }
+
+/************no space columns end******/
+.col-one-fourth{
+  width:25%;
+  float: left;
+}
+@media(max-width:767px){
+  .col-one-fourth{
+    width:50%;
+  }
+}
+@media(max-width:568px){
+  .col-one-fourth{
+    width:100%;
+  } 
+}

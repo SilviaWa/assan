@@ -1,7 +1,7 @@
-[\s"]quote-text[\s"]
+[\s"]tabs[\s"]
 
 
-[\s"]special-feature[\s"]
+[\s"]dropdown-submenu[\s"]
 
 [\s"]testimonials[\s"]
 

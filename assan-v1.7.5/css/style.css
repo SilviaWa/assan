@@ -295,6 +295,9 @@ p.sub-text {
   height: 85px; }
 
 /*marginleft*/
+.margin-right-10 {
+  margin-right: 10px; }
+
 /*margins*/
 .margin10 {
   margin-bottom: 10px; }

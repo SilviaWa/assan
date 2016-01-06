@@ -18,10 +18,7 @@ body {
 
 /*basic partial scss includes "resetting" and "dividers" and nav overrides, 
   form elements, buttons, image hover effect(both old and new)*/
-/*
-/*-----------------------------------------------------------------------------------*/
-/*  RESET
-/*-----------------------------------------------------------------------------------*/
+-d
 *,
 *:before,
 *:after {
@@ -165,11 +162,12 @@ h6 {
 
 /*parahraphs*/
 p {
-  color: #555;
+  font-size: 1.1em;
+  color: #000;
   line-height: 24px;
   margin: 0 0 20px;
   font-family: "Open Sans", sans-serif;
-  font-weight: 400; }
+  font-weight: 500; }
 
 p.sub-text {
   font-style: normal;
@@ -2138,14 +2136,10 @@ h3.heading-progress {
   border-radius: 0px; }
 
 .panel-default > .panel-heading {
-  color: #000;
-  background-color: #fff;
-  border-color: #4f82e9 !important;
   padding: 7px 12px; }
 
 .panel-title i {
-  margin-right: 10px;
-  color: #4f82e9; }
+  margin-right: 10px; }
 
 /************************************************* css for footers****************************************/
 /************************************************* css for footers****************************************/
@@ -2156,6 +2150,8 @@ h3.heading-progress {
   padding: 80px 0 0;
   position: relative;
   clear: both; }
+  #footer p {
+    color: #999; }
 
 .footer-col h3 {
   color: #fff;
@@ -2480,7 +2476,6 @@ ol.breadcrumb {
   ol.breadcrumb li {
     font-weight: 400;
     font-size: 13px;
-    text-transform: capitalize;
     letter-spacing: 1px; }
     ol.breadcrumb li a {
       color: #333; }

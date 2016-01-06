@@ -1,4 +1,4 @@
-/*
+-d/*
 /*-----------------------------------------------------------------------------------*/
 /*  RESET
 /*-----------------------------------------------------------------------------------*/
@@ -144,11 +144,12 @@ h6 {
 }
 /*parahraphs*/
 p {
-    color: #555;
+    font-size: 1.1em;
+    color: #000;
     line-height: 24px;
     margin: 0 0 20px;
     font-family: $primary-font;
-    font-weight: 400;
+    font-weight: 500;
 }
 p.sub-text{
     font-style: normal;
